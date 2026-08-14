@@ -89,8 +89,8 @@ export function Hero() {
             transition={{ delay: 0.3, duration: 0.8, ease: 'easeOut' }}
             className="relative mx-auto w-full max-w-[280px] lg:max-w-none order-first lg:order-none"
           >
-            <div className="absolute inset-x-4 bottom-0 top-8 rounded-t-[999px] bg-gradient-accent opacity-20 blur-2xl" />
-            <div className="relative overflow-hidden rounded-t-[999px] rounded-b-3xl border border-border bg-surface-2/60 backdrop-blur-sm">
+            <div className="absolute inset-x-4 bottom-0 top-8 rounded-t-[999px] bg-primary opacity-20 blur-2xl" />
+            <div className="relative overflow-hidden rounded-t-[999px] rounded-b-3xl border border-border bg-secondary/60 backdrop-blur-sm">
               <img
                 src={portraitAsset.url}
                 alt="Portrait of Harshawardhan Kapadnis, AI Engineer"
