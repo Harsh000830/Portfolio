@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 
 const contacts = [
-  { label: 'PUNE, INDIA', type: 'location', link: '#' },
-  { label: 'REMOTE / WORLDWIDE', type: 'location', link: '#' },
+  { label: 'NASHIK, MAHARASHTRA — INDIA', link: '#' },
+  { label: 'OPEN TO REMOTE / RELOCATION', link: '#' },
 ]
 
 const fadeInUp = {
@@ -33,45 +33,35 @@ export function Contact() {
           Get in touch
         </motion.h2>
 
-        <motion.div
-          {...fadeInUp}
-          className="w-full h-px bg-gray-700 mb-12 lg:mb-16"
-        />
+        <motion.div {...fadeInUp} className="w-full h-px bg-gray-700 mb-12 lg:mb-16" />
 
         {/* Informal Text */}
-        <motion.div
-          {...fadeInUp}
-          className="mb-12 lg:mb-16 max-w-2xl"
-        >
+        <motion.div {...fadeInUp} className="mb-12 lg:mb-16 max-w-2xl">
           <h3 className="text-xl md:text-2xl lg:text-3xl text-white font-light leading-tight mb-4">
-            I'M OFTEN<br />
+            I'M USUALLY<br />
             DEEP IN A BUILD,<br />
             BUT I READ EVERYTHING
           </h3>
           <p className="text-sm text-gray-500 tracking-widest uppercase">
-            FOR PROJECT INQUIRIES, COLLABORATIONS, OR JUST TO TALK SHOP
+            FOR ROLES, COLLABORATIONS, OR JUST TO TALK SHOP
           </p>
         </motion.div>
 
         {/* Contact Links */}
         <div className="space-y-0 max-w-2xl">
           {contacts.map((contact, index) => (
-            <motion.a
+            <motion.div
               key={contact.label}
-              href={contact.link}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="flex items-center justify-between border-t border-gray-800 py-5 md:py-6 group hover:bg-gray-900/30 transition-colors px-4 -mx-4"
+              className="flex items-center justify-between border-t border-gray-800 py-5 md:py-6 px-4 -mx-4"
             >
               <span className="text-sm text-gray-400 tracking-widest">
                 {contact.label}
               </span>
-              <span className="text-gray-500 group-hover:text-white transition-colors">
-                ↗
-              </span>
-            </motion.a>
+            </motion.div>
           ))}
           <div className="border-t border-gray-800" />
         </div>
@@ -84,15 +74,21 @@ export function Contact() {
           <p className="text-sm text-gray-500 mb-6 lg:mb-8 tracking-widest uppercase">
             Or reach me directly
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-16">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-8 md:gap-12">
             <a
-              href="mailto:hello@harshawardhan.dev"
+              href="mailto:harshawardhankapadnis@gmail.com"
               className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
-              hello@harshawardhan.dev
+              harshawardhankapadnis@gmail.com
             </a>
             <a
-              href="https://github.com/harshawardhank"
+              href="tel:+918010798307"
+              className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
+            >
+              +91 80107 98307
+            </a>
+            <a
+              href="https://github.com/Harsh000830"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
@@ -100,7 +96,7 @@ export function Contact() {
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/harshawardhankapadnis"
+              href="https://www.linkedin.com/in/harshawardhan-kapadnis"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
@@ -119,7 +115,7 @@ export function Contact() {
             © {new Date().getFullYear()} Harshawardhan Kapadnis. All rights reserved.
           </p>
           <p className="text-xs text-gray-600">
-            Pune / Remote
+            Nashik / Remote
           </p>
         </motion.footer>
       </div>
