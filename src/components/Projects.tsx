@@ -3,23 +3,17 @@ import { motion } from 'framer-motion'
 const projects = [
   {
     title: 'Blockchain Based Employee Reward Management System',
-    stack: 'MERN Stack · Solidity · Ethereum · Web3.js',
-    year: '2025',
-    points: [
-      'Automated performance evaluation with smart contract-based reward allocation.',
-      'Tamper-proof on-chain reward tracking that removes manual HR effort and bias.',
-      'Admin and employee dashboards for tasks, redemption, and record verification.',
-    ],
+    period: 'Jan 2025 — Apr 2025',
+    description:
+      'A decentralized reward platform on Ethereum with Solidity smart contracts for transparent, tamper-proof performance payouts. Built the full stack with React, Node.js and Web3.js, integrated MetaMask for secure wallet transactions, and designed an admin dashboard for tracking employee performance metrics and reward distribution history.',
+    stack: ['Solidity', 'Ethereum', 'React.js', 'Node.js', 'Web3.js', 'MetaMask'],
   },
   {
-    title: 'Deepfake Detection System — Media Authenticator',
-    stack: 'TensorFlow · OpenCV · Python · CNN · Computer Vision',
-    year: '2025',
-    points: [
-      'CNN-based detection reaching 92% accuracy across 10,000+ images.',
-      'Preprocessing pipeline handling 500+ images/min for real-time verification.',
-      'Reduced false detections by 15% across multiple datasets.',
-    ],
+    title: 'Deepfake Detection System',
+    period: 'Aug 2024 — Nov 2024',
+    description:
+      'A CNN-based classifier reaching 92% accuracy across a dataset of 10,000+ real and manipulated images. Applied transfer learning with pre-trained architectures and image augmentation to improve generalization, then deployed it behind a Flask web interface for real-time upload and analysis.',
+    stack: ['Python', 'TensorFlow', 'CNN', 'Transfer Learning', 'OpenCV', 'Flask'],
   },
 ]
 
@@ -61,19 +55,14 @@ export function Projects() {
                   <h3 className="text-xl md:text-2xl lg:text-3xl font-light text-white mb-3">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-gray-600">{project.year}</p>
+                  <p className="text-sm text-gray-600">{project.period}</p>
                 </div>
                 <div className="lg:col-span-7">
-                  <ul className="space-y-3 mb-6">
-                    {project.points.map((point) => (
-                      <li key={point} className="text-gray-400 leading-relaxed text-sm lg:text-base pl-5 relative">
-                        <span className="absolute left-0 top-[0.6em] w-2 h-px bg-gray-600" />
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-gray-400 leading-relaxed mb-6 text-sm lg:text-base">
+                    {project.description}
+                  </p>
                   <div className="flex flex-wrap gap-2">
-                    {project.stack.split(' · ').map((tech) => (
+                    {project.stack.map((tech) => (
                       <span
                         key={tech}
                         className="px-3 py-1 text-xs text-gray-500 border border-gray-800 rounded-full"
