@@ -18,36 +18,28 @@ const projects = [
     stack: ['Python', 'TensorFlow', 'CNN', 'Transfer Learning', 'OpenCV', 'Flask'],
   },
   {
-    title: 'P2X Maker — P&ID to DCS Converter',
-    period: 'Dec 2025 — Present',
+    title: 'RAG Knowledge Assistant',
+    period: '2025',
+    tag: 'Generative AI',
+    description:
+      'A retrieval-augmented chat assistant over private document sets: chunking and embedding pipeline, vector search for grounded context, and an LLM answer layer with inline source citations to keep responses verifiable.',
+    stack: ['Python', 'LangChain', 'Vector DB', 'LLMs', 'FastAPI'],
+  },
+  {
+    title: 'Document Intelligence & OCR Pipeline',
+    period: '2025',
     tag: 'Computer Vision',
     description:
-      'Automated conversion of industrial P&ID drawings into DCS diagrams: YOLOv8 segmentation with patch-based tiling for 100+ symbols, three-method line detection, PaddleOCR text extraction, Neo4j connectivity graph, and a React + FastAPI platform with an embedded Draw.io editor.',
-    stack: ['YOLOv8', 'FastAPI', 'PaddleOCR', 'Neo4j', 'React'],
+      'An end-to-end pipeline that turns scanned documents into structured data — layout detection, PaddleOCR text extraction, field parsing and validation, exposed through an API with a review dashboard for corrections.',
+    stack: ['PaddleOCR', 'OpenCV', 'Python', 'FastAPI', 'React'],
   },
   {
-    title: 'Safe Driver Recognition System',
-    period: '2025',
-    tag: 'Real-time AI',
+    title: 'Personal Portfolio Platform',
+    period: '2026',
+    tag: 'Full Stack',
     description:
-      'Driver drowsiness detection through blink tracking and face landmarks, extended with emotion recognition and heart-rate monitoring to flag potential cardiac events. Twilio API dispatches emergency alerts in real time.',
-    stack: ['Python', 'OpenCV', 'Deep Learning', 'Twilio API'],
-  },
-  {
-    title: 'Cryo-Preservation Smart Container — SIH 2024',
-    period: '2024',
-    tag: 'Hardware + IoT',
-    description:
-      'A vacuum-insulated, pressure-regulated container for livestock semen preservation that cut nitrogen loss by 40%, built for the Smart India Hackathon and taken to the national finals.',
-    stack: ['IoT', 'Sensors', 'Thermal Design', 'Prototyping'],
-  },
-  {
-    title: 'Automated Solar Tracking System',
-    period: '2023',
-    tag: 'IoT',
-    description:
-      'An LDR-sensor driven dual-axis solar tracker that follows the sun through the day to maximise panel yield. Placed third at the institute IoT project competition.',
-    stack: ['Arduino', 'LDR Sensors', 'Embedded C', 'Automation'],
+      'This site — a motion-driven React portfolio with a custom design system, fluid spacing scale, inertial smooth scrolling and fully responsive editorial layouts built from scratch.',
+    stack: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
   },
 ]
 
@@ -74,8 +66,8 @@ export function Projects() {
           PROJECTS
         </motion.h2>
         <motion.p {...fadeInUp} className="text-muted-foreground max-w-xl mb-16 lg:mb-20">
-          Six builds spanning computer vision, generative AI, Web3 and hardware —
-          each one shipped, demoed or judged.
+          Builds spanning computer vision, generative AI, Web3 and full-stack
+          engineering — each one shipped, demoed or judged.
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
