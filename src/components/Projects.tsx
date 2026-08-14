@@ -116,7 +116,19 @@ export function Projects() {
                   </span>
                 ))}
               </div>
+
+              {'link' in project && project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="inline-flex items-center gap-2 mt-6 text-sm text-primary hover:opacity-70"
+                >
+                  View on GitHub <span aria-hidden>↗</span>
+                </a>
+              )}
             </motion.article>
+
           ))}
         </div>
       </div>
