@@ -2,36 +2,22 @@ import { motion } from 'framer-motion'
 
 const experiences = [
   {
-    title: 'Senior AI Engineer',
-    company: 'Applied AI Startup',
-    location: 'Remote',
-    period: '2023 — Present',
-    description: 'Lead the design and delivery of LLM-powered features — retrieval pipelines, evaluation harnesses, and agent workflows. Own model selection, fine-tuning, and the production stack that keeps latency, cost, and quality in check.',
-    skills: ['LLMs', 'RAG', 'Evaluation', 'AI Agents', 'MLOps'],
+    title: 'P2X Maker — P&ID-to-DCS Converter',
+    company: 'Gen AI Intern · Combat Solutions',
+    location: 'India',
+    period: 'Dec 2025 — Jun 2026',
+    description:
+      'Engineered an automated P&ID to DCS conversion system using YOLOv8 segmentation with patch-based tiling to detect 100+ industrial symbols and pipe connections, eliminating weeks of manual digitization. Built three-method line detection (CLAHE, Canny, adaptive thresholding) for accurate pipe extraction across varying drawing quality, plus a full-stack React + FastAPI platform with an embedded Draw.io editor, PaddleOCR text extraction, Neo4j connectivity mapping, and multi-format export.',
+    skills: ['YOLOv8', 'Computer Vision', 'FastAPI', 'React', 'PaddleOCR', 'Neo4j', 'XAML'],
   },
   {
-    title: 'Machine Learning Engineer',
-    company: 'Enterprise SaaS',
-    location: 'Remote',
-    period: '2021 — 2023',
-    description: 'Built and deployed ML models for search, ranking, and recommendation. Established experiment tracking, CI for models, and monitoring that caught regressions before users did.',
-    skills: ['Recommender Systems', 'MLOps', 'Experimentation', 'Python', 'Kubernetes'],
-  },
-  {
-    title: 'Data Scientist',
-    company: 'FinTech',
-    location: 'Bengaluru, India',
-    period: '2019 — 2021',
-    description: 'Prototyped and productionized predictive models, partnering with product to ship data-driven features. Introduced the team\u2019s first feature store and model registry.',
-    skills: ['Predictive Modeling', 'Feature Engineering', 'SQL', 'Python', 'A/B Testing'],
-  },
-  {
-    title: 'Software Engineer (ML)',
-    company: 'HealthTech',
-    location: 'Pune, India',
-    period: '2017 — 2019',
-    description: 'Built data pipelines and model-serving infrastructure. First exposure to training and deploying deep learning models at scale, and to the gap between a working notebook and a live system.',
-    skills: ['Data Pipelines', 'Model Serving', 'Deep Learning', 'AWS', 'Docker'],
+    title: 'Safe Driver Recognition System',
+    company: 'Gen AI Intern · Combat Solutions',
+    location: 'India',
+    period: 'Dec 2025 — Jun 2026',
+    description:
+      'Implemented blink detection and face tracking for driver drowsiness detection, and integrated the Twilio API for real-time alert notifications. Extended the system with emotion detection and heart rate monitoring to flag potential cardiac events, dispatching emergency alerts in real time. Improved detection accuracy through model tuning and performance optimization.',
+    skills: ['Python', 'OpenCV', 'Deep Learning', 'Twilio API', 'Real-time Systems'],
   },
 ]
 
@@ -63,7 +49,7 @@ export function Work() {
         <div className="space-y-0">
           {experiences.map((exp, index) => (
             <motion.article
-              key={exp.company + exp.period}
+              key={exp.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}

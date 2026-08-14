@@ -38,9 +38,9 @@ export function Hero() {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="mt-6 md:mt-8 text-sm sm:text-base text-white/80 max-w-sm md:max-w-md leading-relaxed"
             >
-              I design and ship production machine learning systems — from research
-              prototypes to deployed LLM applications and AI agents that solve real
-              problems at scale.
+              AI/ML and full stack developer building computer vision, generative AI
+              and blockchain systems that make it out of the notebook and into
+              production.
             </motion.p>
           </motion.div>
         </div>

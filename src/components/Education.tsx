@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import campusImg from '@/assets/edu-campus.jpg'
 import labImg from '@/assets/edu-lab.jpg'
-import libraryImg from '@/assets/edu-library.jpg'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -27,21 +26,20 @@ export function Education() {
           EDUCATION
         </motion.h2>
 
-        {/* Education Items */}
         <div className="space-y-16 lg:space-y-24">
           {/* B.Tech */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
             <motion.div {...fadeInUp}>
               <img
                 src={campusImg}
-                alt="University campus"
+                alt="K.K. Wagh Institute of Education and Research campus"
                 loading="lazy"
                 width={1200}
                 height={900}
                 className="w-full h-auto grayscale"
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-                COMPUTER SCIENCE — INDIA
+                NASHIK, MAHARASHTRA — INDIA
               </p>
             </motion.div>
 
@@ -51,21 +49,23 @@ export function Education() {
               className="flex items-center"
             >
               <div>
-                <h3 className="text-xl lg:text-2xl font-light text-white mb-4">
-                  B.Tech, Computer Science
+                <h3 className="text-xl lg:text-2xl font-light text-white mb-2">
+                  B.Tech, Artificial Intelligence & Data Science
                 </h3>
-                <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
-                  The foundation — algorithms, systems, and the first taste of machine
-                  learning. A degree that taught Harshawardhan how to think about
-                  problems at scale and how to learn fast when the field moves faster
-                  than the syllabus.
+                <p className="text-base text-gray-400 mb-4">
+                  K.K. Wagh Institute of Education and Research, Nashik
                 </p>
-                <p className="text-sm text-gray-500">2013 — 2017</p>
+                <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
+                  Four years spent moving between the theory and the build — statistics,
+                  deep learning, and data engineering on one side, and hackathons,
+                  competitions, and shipped side projects on the other.
+                </p>
+                <p className="text-sm text-gray-500">Nov 2022 — Jun 2026 · CGPA 7.80</p>
               </div>
             </motion.div>
           </div>
 
-          {/* M.S. */}
+          {/* Focus areas */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
             <motion.div
               {...fadeInUp}
@@ -73,14 +73,15 @@ export function Education() {
             >
               <div>
                 <h3 className="text-xl lg:text-2xl font-light text-white mb-4">
-                  M.S., Machine Learning
+                  Focus Areas
                 </h3>
                 <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
-                  A deep dive into statistical learning, optimization, and neural
-                  architectures. Where the engineering mindset met research rigor — and
-                  where shipping a model that actually generalizes became the obsession.
+                  Computer vision and deep learning coursework grounded the work at
+                  Combat Solutions — segmentation, OCR pipelines, and real-time
+                  inference. Alongside it, full-stack and database work made the models
+                  usable: APIs, dashboards, and deployable products rather than notebooks.
                 </p>
-                <p className="text-sm text-gray-500">2017 — 2019</p>
+                <p className="text-sm text-gray-500">Computer Vision · NLP · Generative AI · Full Stack</p>
               </div>
             </motion.div>
 
@@ -91,51 +92,15 @@ export function Education() {
             >
               <img
                 src={labImg}
-                alt="Machine learning research lab"
+                alt="Machine learning lab work"
                 loading="lazy"
                 width={1200}
                 height={900}
                 className="w-full h-auto grayscale"
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-                GRADUATE RESEARCH — ML LAB
+                VISION · NLP · GENERATIVE AI
               </p>
-            </motion.div>
-          </div>
-
-          {/* Specialization */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
-            <motion.div {...fadeInUp}>
-              <img
-                src={libraryImg}
-                alt="Deep learning specialization"
-                loading="lazy"
-                width={1200}
-                height={900}
-                className="w-full h-auto grayscale"
-              />
-              <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-                DEEP LEARNING SPECIALIZATION
-              </p>
-            </motion.div>
-
-            <motion.div
-              {...fadeInUp}
-              transition={{ ...fadeInUp.transition, delay: 0.2 }}
-              className="flex items-center"
-            >
-              <div>
-                <h3 className="text-xl lg:text-2xl font-light text-white mb-4">
-                  Deep Learning Specialization
-                </h3>
-                <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
-                  Structured study of modern deep learning — from the math of
-                  backpropagation to building and training neural networks for vision
-                  and language. The bridge from coursework to the practical craft of
-                  building AI systems.
-                </p>
-                <p className="text-sm text-gray-500">2019</p>
-              </div>
             </motion.div>
           </div>
         </div>

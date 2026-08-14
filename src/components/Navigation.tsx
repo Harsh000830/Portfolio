@@ -7,15 +7,15 @@ const navItems = [
   { id: 'about', label: 'About' },
   { id: 'skills', label: 'Skills' },
   { id: 'work', label: 'Work' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'achievements', label: 'Achievements' },
   { id: 'education', label: 'Education' },
-  { id: 'writing', label: 'Writing' },
-  { id: 'speaking', label: 'Speaking' },
 ]
 
 const socialLinks = [
-  { label: 'Mail', href: 'mailto:hello@harshawardhan.dev' },
-  { label: 'GitHub', href: 'https://github.com/harshawardhank' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/harshawardhankapadnis' },
+  { label: 'Mail', href: 'mailto:harshawardhankapadnis@gmail.com' },
+  { label: 'GitHub', href: 'https://github.com/Harsh000830' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/harshawardhan-kapadnis' },
 ]
 
 export function Navigation() {
