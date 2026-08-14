@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion'
+import workspaceImg from '@/assets/workspace.jpg'
+import abstractImg from '@/assets/abstract.jpg'
+import researchImg from '@/assets/research.jpg'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -13,7 +16,7 @@ export function About() {
       <div className="max-w-7xl mx-auto">
         {/* Section Label */}
         <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">About Bruce</span>
+          <span className="text-sm text-gray-500 tracking-widest uppercase">About Harshawardhan</span>
           <div className="w-6 h-px bg-gray-600 mt-2" />
         </motion.div>
 
@@ -24,12 +27,15 @@ export function About() {
             className="order-2 lg:order-1"
           >
             <img
-              src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Early work - Street photography"
+              src={workspaceImg}
+              alt="Harshawardhan at his workstation"
+              loading="lazy"
+              width={1200}
+              height={900}
               className="w-full h-auto grayscale"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-              PARSONS SCHOOL OF DESIGN - NEW YORK / USA
+              FROM ALGORITHMS TO MODELS
             </p>
           </motion.div>
 
@@ -39,10 +45,11 @@ export function About() {
             className="order-1 lg:order-2 flex items-center"
           >
             <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
-              It may not be obvious, but Bruce studied computer science at MIT, 
-              with a minor in visual arts. Preferring lenses to algorithms, 
-              he quickly abandoned a promising tech career to study Photography 
-              and Visual Storytelling at Parsons School of Design in New York.
+              It started with algorithms. Harshawardhan studied computer science and
+              quickly gravitated toward machine learning — drawn less to writing
+              software that follows rules, and more to building systems that learn
+              them. That curiosity grew into a career engineering intelligent systems
+              that hold up under real-world load.
             </p>
           </motion.div>
         </div>
@@ -53,14 +60,14 @@ export function About() {
           className="mb-24 lg:mb-32"
         >
           <h2 className="font-display text-[8vw] lg:text-section leading-none tracking-tight text-gray-300">
-            "NAMED BY THE<br />
-            <span className="text-white underline underline-offset-8">2023 APERTURE AWARDS</span><br />
-            AS ONE OF THE TOP TEN<br />
-            PHOTOGRAPHERS IN THE WORLD."
+            "USEFUL, HONEST,<br />
+            <span className="text-white underline underline-offset-8">AND ACTUALLY SHIPPED.</span><br />
+            THE ONLY KIND OF AI<br />
+            WORTH BUILDING."
           </h2>
           <p className="mt-6 text-sm text-gray-500 tracking-widest uppercase">
-            GLOBAL PHOTOGRAPHY<br />
-            DIRECTOR RANK
+            ENGINEERING<br />
+            PHILOSOPHY
           </p>
         </motion.div>
 
@@ -71,10 +78,11 @@ export function About() {
             className="flex items-center lg:text-right"
           >
             <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
-              Bruce spent a little over a year in New York before moving to 
-              London as a Junior Photographer for Magnum Photos. He met some 
-              incredible people at the legendary agency, and they're still 
-              friends to this day.
+              After early work in applied ML, Harshawardhan moved into building and
+              operating ML platforms at scale — the unglamorous engineering that turns
+              a notebook into a reliable, monitored, cost-aware service. Along the way
+              he has partnered with product, data, and design teams to ship features used
+              by real people.
             </p>
           </motion.div>
 
@@ -83,12 +91,15 @@ export function About() {
             transition={{ ...fadeInUp.transition, delay: 0.2 }}
           >
             <img
-              src="https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Magnum Photos Office"
+              src={abstractImg}
+              alt="Abstract neural network visualization"
+              loading="lazy"
+              width={1200}
+              height={900}
               className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-              MAGNUM PHOTOS - LONDON / UK
+              BUILDING ML PLATFORMS AT SCALE
             </p>
           </motion.div>
         </div>
@@ -97,13 +108,15 @@ export function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
           <motion.div {...fadeInUp}>
             <img
-              src="https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Bruce shooting for National Geographic"
+              src={researchImg}
+              alt="Research and evaluation tooling"
+              loading="lazy"
+              width={1200}
+              height={900}
               className="w-full h-auto grayscale"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-              SHOOTING FOR NATIONAL GEOGRAPHIC - PATAGONIA / AR<br />
-              (2019)
+              LLMS · AGENTS · EVALUATION
             </p>
           </motion.div>
 
@@ -113,12 +126,10 @@ export function About() {
             className="flex items-center"
           >
             <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
-              From London, Bruce moved to Berlin with VII Photo Agency. Where he 
-              worked under a great Art Director, Hans Mueller. From there he 
-              went on to build a truly global career, first as Staff Photographer 
-              then as Creative Director for the likes of National Geographic, 
-              Time Magazine, and The New York Times, before finally going 
-              independent in 2020.
+              Today Harshawardhan focuses on large language models and AI agents —
+              retrieval systems, fine-tuning, evaluation, and the orchestration that
+              makes them dependable. He works independently with select teams, and
+              writes and speaks about what he learns along the way.
             </p>
           </motion.div>
         </div>

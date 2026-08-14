@@ -2,27 +2,33 @@ import { motion } from 'framer-motion'
 
 const articles = [
   {
-    title: 'Visual Storytelling in the Digital Age',
-    publication: 'Aperture Magazine',
+    title: 'Putting RAG in Production Without Losing Your Mind',
+    publication: 'Engineering Blog',
+    year: '2024',
+    link: '#',
+  },
+  {
+    title: 'Evaluating LLMs: Beyond Vibe Checks',
+    publication: 'ML Journal',
+    year: '2024',
+    link: '#',
+  },
+  {
+    title: 'Why Your Model Works in a Notebook and Breaks in Prod',
+    publication: 'Towards Data Science',
     year: '2023',
     link: '#',
   },
   {
-    title: 'The Ethics of Documentary Photography',
-    publication: 'Photography Journal',
+    title: 'The Quiet Art of Prompt Engineering',
+    publication: 'AI Weekly',
+    year: '2023',
+    link: '#',
+  },
+  {
+    title: 'Designing AI Agents That Actually Finish the Job',
+    publication: 'The Gradient',
     year: '2022',
-    link: '#',
-  },
-  {
-    title: 'Finding Light in Darkness: A Personal Journey',
-    publication: 'The New York Times',
-    year: '2021',
-    link: '#',
-  },
-  {
-    title: 'Why Black & White Still Matters',
-    publication: 'British Journal of Photography',
-    year: '2020',
     link: '#',
   },
 ]

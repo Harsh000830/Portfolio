@@ -1,14 +1,16 @@
 import { motion } from 'framer-motion'
 
 const skills = [
-  'Editorial Photography',
-  'Portrait Photography',
-  'Documentary',
-  'Commercial Campaigns',
-  'Art Direction',
-  'Visual Storytelling',
-  'Photo Editing',
-  'Creative Direction',
+  'Machine Learning',
+  'Deep Learning',
+  'Natural Language Processing',
+  'Large Language Models (LLMs)',
+  'Retrieval-Augmented Generation (RAG)',
+  'Model Fine-tuning & Evaluation',
+  'AI Agents & Tool Use',
+  'Computer Vision',
+  'MLOps & Model Deployment',
+  'Python · PyTorch · TensorFlow',
 ]
 
 const fadeInUp = {

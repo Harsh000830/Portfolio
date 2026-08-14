@@ -2,33 +2,33 @@ import { motion } from 'framer-motion'
 
 const talks = [
   {
-    title: 'The Power of Visual Narrative',
-    event: 'Creative Conference Berlin',
+    title: 'From Notebook to Production: The ML Engineering Gap',
+    event: 'PyData Conference',
+    year: '2024',
+    link: '#',
+  },
+  {
+    title: 'RAG Done Right: Retrieval That Actually Works',
+    event: 'AI Engineers Summit',
+    year: '2024',
+    link: '#',
+  },
+  {
+    title: 'Evaluating LLM Systems at Scale',
+    event: 'MLOps World',
     year: '2023',
     link: '#',
   },
   {
-    title: 'Documentary Photography in the Age of AI',
-    event: 'TED Talk',
+    title: 'Building AI Agents That Don\u2019t Hallucinate Themselves',
+    event: 'Local AI Meetup',
     year: '2023',
     link: '#',
   },
   {
-    title: 'Finding Your Voice Through the Lens',
-    event: 'PhotoLondon Festival',
+    title: 'The Ethics of Shipping AI',
+    event: 'Tech Ethics Panel',
     year: '2022',
-    link: '#',
-  },
-  {
-    title: 'The Responsibility of the Witness',
-    event: 'World Press Photo Awards',
-    year: '2021',
-    link: '#',
-  },
-  {
-    title: 'Light, Shadow, and Human Connection',
-    event: 'Aperture Foundation',
-    year: '2020',
     link: '#',
   },
 ]
