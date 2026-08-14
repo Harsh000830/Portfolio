@@ -82,6 +82,28 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
+          {/* Portrait */}
+          <motion.div
+            initial={{ opacity: 0, y: 30, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 0.3, duration: 0.8, ease: 'easeOut' }}
+            className="relative mx-auto w-full max-w-[280px] lg:max-w-none order-first lg:order-none"
+          >
+            <div className="absolute inset-x-4 bottom-0 top-8 rounded-t-[999px] bg-gradient-accent opacity-20 blur-2xl" />
+            <div className="relative overflow-hidden rounded-t-[999px] rounded-b-3xl border border-border bg-surface-2/60 backdrop-blur-sm">
+              <img
+                src={portraitAsset.url}
+                alt="Portrait of Harshawardhan Kapadnis, AI Engineer"
+                width={760}
+                height={760}
+                loading="eager"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </motion.div>
+          </div>
+
+
           {/* Stats */}
           <motion.dl
             initial={{ opacity: 0, y: 24 }}
