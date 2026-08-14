@@ -1,9 +1,5 @@
 import { motion } from 'framer-motion'
 
-const contacts = [
-  { label: 'NASHIK, MAHARASHTRA — INDIA', link: '#' },
-  { label: 'OPEN TO REMOTE / RELOCATION', link: '#' },
-]
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
