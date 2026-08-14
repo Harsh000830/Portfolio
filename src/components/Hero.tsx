@@ -113,15 +113,6 @@ export function Hero() {
         <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent" />
       </div>
 
-      {/* Mobile: portrait as background behind text */}
-      <div className="absolute inset-0 -z-0 lg:hidden">
-        <img
-          src={portraitAsset.url}
-          alt="Harshawardhan Kapadnis — AI Engineer"
-          className="h-full w-full object-cover object-[center_25%] opacity-35"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/50" />
-      </div>
     </section>
   )
 }
