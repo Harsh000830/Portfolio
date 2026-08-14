@@ -10,9 +10,20 @@ const stats = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden hero-glow grid lg:grid-cols-2">
+    <section className="relative min-h-screen w-full overflow-hidden hero-glow flex flex-col lg:grid lg:grid-cols-2">
+      {/* Mobile: portrait on top, visible (not behind text) */}
+      <div className="relative w-full h-[42vh] min-h-[300px] overflow-hidden lg:hidden">
+        <img
+          src={portraitAsset.url}
+          alt="Portrait of Harshawardhan Kapadnis, AI Engineer"
+          className="h-full w-full object-cover object-[center_18%]"
+        />
+        {/* blend bottom into the text section */}
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background to-transparent" />
+      </div>
+
       {/* Left: text */}
-      <div className="relative z-10 min-h-screen flex flex-col justify-end section-gutter pb-[var(--space-xl)] pt-32 lg:bg-background">
+      <div className="relative z-10 flex flex-col justify-end section-gutter pb-[var(--space-xl)] pt-8 lg:min-h-screen lg:pt-32 lg:bg-background">
         <div className="w-full max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -102,15 +113,6 @@ export function Hero() {
         <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent" />
       </div>
 
-      {/* Mobile: portrait as background behind text */}
-      <div className="absolute inset-0 -z-0 lg:hidden">
-        <img
-          src={portraitAsset.url}
-          alt="Harshawardhan Kapadnis — AI Engineer"
-          className="h-full w-full object-cover object-[center_25%] opacity-35"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/50" />
-      </div>
     </section>
   )
 }
