@@ -66,8 +66,8 @@ export function Projects() {
           PROJECTS
         </motion.h2>
         <motion.p {...fadeInUp} className="text-muted-foreground max-w-xl mb-16 lg:mb-20">
-          Six builds spanning computer vision, generative AI, Web3 and hardware —
-          each one shipped, demoed or judged.
+          Builds spanning computer vision, generative AI, Web3 and full-stack
+          engineering — each one shipped, demoed or judged.
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
