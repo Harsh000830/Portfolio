@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import heroImage from '@/assets/hero.jpg'
+import portraitAsset from '@/assets/harsh-portrait.png.asset.json'
 
 const stats = [
   { value: '2+', label: 'Years building AI' },
