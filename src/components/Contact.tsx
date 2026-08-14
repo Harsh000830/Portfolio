@@ -47,43 +47,21 @@ export function Contact() {
           </p>
         </motion.div>
 
-        {/* Contact Links */}
-        <div className="space-y-0 max-w-2xl">
-          {contacts.map((contact, index) => (
-            <motion.div
-              key={contact.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="flex items-center justify-between border-t border-gray-800 py-5 md:py-6 px-4 -mx-4"
-            >
-              <span className="text-sm text-gray-400 tracking-widest">
-                {contact.label}
-              </span>
-            </motion.div>
-          ))}
-          <div className="border-t border-gray-800" />
-        </div>
-
         {/* Direct Contact */}
         <motion.div
           {...fadeInUp}
-          className="mt-16 lg:mt-24 pt-12 lg:pt-16 border-t border-gray-800"
+          className="mt-10 pt-8 border-t border-gray-800"
         >
-          <p className="text-sm text-gray-500 mb-6 lg:mb-8 tracking-widest uppercase">
-            Or reach me directly
-          </p>
-          <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-8 md:gap-12">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-x-10 gap-y-3 items-start sm:items-center">
             <a
               href="mailto:harshawardhankapadnis@gmail.com"
-              className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
+              className="text-lg text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
               harshawardhankapadnis@gmail.com
             </a>
             <a
               href="tel:+918010798307"
-              className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
+              className="text-lg text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
               +91 80107 98307
             </a>
@@ -91,7 +69,7 @@ export function Contact() {
               href="https://github.com/Harsh000830"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
+              className="text-lg text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
               GitHub
             </a>
@@ -99,7 +77,7 @@ export function Contact() {
               href="https://www.linkedin.com/in/harshawardhan-kapadnis"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
+              className="text-lg text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
               LinkedIn
             </a>
@@ -109,13 +87,13 @@ export function Contact() {
         {/* Footer */}
         <motion.footer
           {...fadeInUp}
-          className="mt-24 lg:mt-32 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4"
+          className="mt-10 pt-6 border-t border-gray-900 flex flex-col sm:flex-row justify-between items-center gap-2"
         >
           <p className="text-xs text-gray-600">
-            © {new Date().getFullYear()} Harshawardhan Kapadnis. All rights reserved.
+            © {new Date().getFullYear()} Harshawardhan Kapadnis · Nashik, India · Open to remote
           </p>
           <p className="text-xs text-gray-600">
-            Nashik / Remote
+            Built with React & Tailwind
           </p>
         </motion.footer>
       </div>
