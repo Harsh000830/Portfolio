@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import heroImage from '@/assets/hero.jpg'
 
 export function Hero() {
   return (
@@ -6,12 +7,14 @@ export function Hero() {
       {/* Background Image - Responsive */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="/hero-image.jpg"
-          alt="Bruce Banner"
+          src={heroImage}
+          alt="Harshawardhan Kapadnis — AI Engineer at work"
+          width={1920}
+          height={1080}
           className="w-full h-full object-cover object-center"
         />
         {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40 md:bg-black/30" />
+        <div className="absolute inset-0 bg-black/50 md:bg-black/40" />
       </div>
 
       {/* Content */}
@@ -23,10 +26,10 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <h1 className="font-display leading-none tracking-tighter text-[15vw] sm:text-[12vw] md:text-hero">
-              <span className="block text-white">BRUCE</span>
-              <span className="block text-white">BANNER</span>
-              <span className="block text-white">PHOTOGRAPHY</span>
+            <h1 className="font-display leading-none tracking-tighter text-[13vw] sm:text-[11vw] md:text-hero">
+              <span className="block text-white">HARSHAWARDHAN</span>
+              <span className="block text-white">KAPADNIS</span>
+              <span className="block text-white/90">AI ENGINEER</span>
             </h1>
             
             <motion.p
@@ -35,7 +38,9 @@ export function Hero() {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="mt-6 md:mt-8 text-sm sm:text-base text-white/80 max-w-sm md:max-w-md leading-relaxed"
             >
-              Bruce was named in Aperture Magazine's prestigious "Visual 100" list, as one of the Ten Most Compelling Photographers in 2023.
+              I design and ship production machine learning systems — from research
+              prototypes to deployed LLM applications and AI agents that solve real
+              problems at scale.
             </motion.p>
           </motion.div>
         </div>

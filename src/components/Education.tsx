@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion'
+import campusImg from '@/assets/edu-campus.jpg'
+import labImg from '@/assets/edu-lab.jpg'
+import libraryImg from '@/assets/edu-library.jpg'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -26,16 +29,19 @@ export function Education() {
 
         {/* Education Items */}
         <div className="space-y-16 lg:space-y-24">
-          {/* MIT */}
+          {/* B.Tech */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
             <motion.div {...fadeInUp}>
               <img
-                src="https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="MIT Campus"
+                src={campusImg}
+                alt="University campus"
+                loading="lazy"
+                width={1200}
+                height={900}
                 className="w-full h-auto grayscale"
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-                MIT - CAMBRIDGE / USA
+                COMPUTER SCIENCE — INDIA
               </p>
             </motion.div>
 
@@ -46,19 +52,20 @@ export function Education() {
             >
               <div>
                 <h3 className="text-xl lg:text-2xl font-light text-white mb-4">
-                  Computer Science & Visual Arts
+                  B.Tech, Computer Science
                 </h3>
                 <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
-                  Started with algorithms, ended with apertures. Bruce's time at MIT 
-                  gave him a unique perspective on the intersection of technology 
-                  and visual storytelling that continues to influence his work today.
+                  The foundation — algorithms, systems, and the first taste of machine
+                  learning. A degree that taught Harshawardhan how to think about
+                  problems at scale and how to learn fast when the field moves faster
+                  than the syllabus.
                 </p>
-                <p className="text-sm text-gray-500">2008 — 2012</p>
+                <p className="text-sm text-gray-500">2013 — 2017</p>
               </div>
             </motion.div>
           </div>
 
-          {/* Parsons */}
+          {/* M.S. */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
             <motion.div
               {...fadeInUp}
@@ -66,14 +73,14 @@ export function Education() {
             >
               <div>
                 <h3 className="text-xl lg:text-2xl font-light text-white mb-4">
-                  Photography & Visual Storytelling
+                  M.S., Machine Learning
                 </h3>
                 <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
-                  The decision to pursue photography full-time led Bruce to Parsons, 
-                  where he developed his signature style of documentary portraiture 
-                  and learned the fundamentals of visual narrative.
+                  A deep dive into statistical learning, optimization, and neural
+                  architectures. Where the engineering mindset met research rigor — and
+                  where shipping a model that actually generalizes became the obsession.
                 </p>
-                <p className="text-sm text-gray-500">2013 — 2015</p>
+                <p className="text-sm text-gray-500">2017 — 2019</p>
               </div>
             </motion.div>
 
@@ -83,26 +90,32 @@ export function Education() {
               className="lg:order-1"
             >
               <img
-                src="https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Parsons School of Design"
+                src={labImg}
+                alt="Machine learning research lab"
+                loading="lazy"
+                width={1200}
+                height={900}
                 className="w-full h-auto grayscale"
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-                PARSONS SCHOOL OF DESIGN - NEW YORK / USA
+                GRADUATE RESEARCH — ML LAB
               </p>
             </motion.div>
           </div>
 
-          {/* ICP */}
+          {/* Specialization */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
             <motion.div {...fadeInUp}>
               <img
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="International Center of Photography"
+                src={libraryImg}
+                alt="Deep learning specialization"
+                loading="lazy"
+                width={1200}
+                height={900}
                 className="w-full h-auto grayscale"
               />
               <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-                ICP - NEW YORK / USA
+                DEEP LEARNING SPECIALIZATION
               </p>
             </motion.div>
 
@@ -113,14 +126,15 @@ export function Education() {
             >
               <div>
                 <h3 className="text-xl lg:text-2xl font-light text-white mb-4">
-                  Documentary Photography Certificate
+                  Deep Learning Specialization
                 </h3>
                 <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
-                  An intensive program at ICP refined Bruce's approach to long-form 
-                  documentary projects and deepened his understanding of photographic 
-                  ethics and storytelling responsibility.
+                  Structured study of modern deep learning — from the math of
+                  backpropagation to building and training neural networks for vision
+                  and language. The bridge from coursework to the practical craft of
+                  building AI systems.
                 </p>
-                <p className="text-sm text-gray-500">2016</p>
+                <p className="text-sm text-gray-500">2019</p>
               </div>
             </motion.div>
           </div>
