@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 export function CTABand() {
   return (
-    <section className="px-4 sm:px-6 md:px-12 lg:px-16 py-16">
+    <section className="section-gutter py-[var(--space-xl)]">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

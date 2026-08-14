@@ -54,7 +54,7 @@ export function Work() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.8, ease: 'easeOut', delay: index * 0.1 }}
-              className="border-t border-gray-800 py-8 md:py-12 lg:py-16 group"
+              className="border-t border-border block-y group"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
                 {/* Left Column - Title & Company */}
