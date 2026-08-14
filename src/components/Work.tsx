@@ -34,7 +34,7 @@ export function Work() {
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Career</span>
+          <span className="text-sm text-primary tracking-widest uppercase">Career</span>
           <div className="w-6 h-px bg-gray-600 mt-2" />
         </motion.div>
 

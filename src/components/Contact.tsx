@@ -18,7 +18,7 @@ export function Contact() {
       <div className="max-w-7xl mx-auto">
         {/* Section Label */}
         <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Contact</span>
+          <span className="text-sm text-primary tracking-widest uppercase">Contact</span>
           <div className="w-6 h-px bg-gray-600 mt-2" />
         </motion.div>
 

@@ -16,7 +16,7 @@ export function About() {
       <div className="max-w-7xl mx-auto">
         {/* Section Label */}
         <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">About Harshawardhan</span>
+          <span className="text-sm text-primary tracking-widest uppercase">About Harshawardhan</span>
           <div className="w-6 h-px bg-gray-600 mt-2" />
         </motion.div>
 
@@ -29,7 +29,7 @@ export function About() {
               loading="lazy"
               width={1200}
               height={900}
-              className="w-full h-auto grayscale"
+              className="w-full h-auto rounded-2xl border border-border transition-transform duration-700 hover:scale-[1.02]"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
               APPLIED RESEARCH → PRODUCTION SYSTEMS
@@ -87,7 +87,7 @@ export function About() {
               loading="lazy"
               width={1200}
               height={900}
-              className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+              className="w-full h-auto rounded-2xl border border-border transition-transform duration-700 hover:scale-[1.02]"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
               COMPUTER VISION AT INDUSTRIAL SCALE
@@ -104,7 +104,7 @@ export function About() {
               loading="lazy"
               width={1200}
               height={900}
-              className="w-full h-auto grayscale"
+              className="w-full h-auto rounded-2xl border border-border transition-transform duration-700 hover:scale-[1.02]"
             />
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
               VISION · NLP · RAG · BLOCKCHAIN

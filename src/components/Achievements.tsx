@@ -22,10 +22,10 @@ const fadeInUp = {
 
 export function Achievements() {
   return (
-    <section id="achievements" className="section-padding bg-[#0d0d0d]">
+    <section id="achievements" className="section-padding bg-secondary/30">
       <div className="max-w-7xl mx-auto">
         <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Recognition</span>
+          <span className="text-sm text-primary tracking-widest uppercase">Recognition</span>
           <div className="w-6 h-px bg-gray-600 mt-2" />
         </motion.div>
 
@@ -55,7 +55,7 @@ export function Achievements() {
                     {item.detail}
                   </p>
                 </div>
-                <span className="text-sm text-gray-600 shrink-0">{item.year}</span>
+                <span className="font-display text-3xl text-primary shrink-0 leading-none">{item.year}</span>
               </div>
             </motion.div>
           ))}
