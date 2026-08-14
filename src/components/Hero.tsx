@@ -71,10 +71,11 @@ export function Hero() {
                 See my work
               </a>
               <a
-                href="mailto:harshawardhankapadnis@gmail.com"
+                href="/Harshawardhan_Kapadnis.pdf"
+                download
                 className="rounded-full border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
               >
-                Hire me
+                Hire me ↓
               </a>
             </motion.div>
           </motion.div>
