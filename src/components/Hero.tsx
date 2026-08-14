@@ -10,31 +10,17 @@ const stats = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden hero-glow">
-      {/* Portrait as full-bleed background */}
-      <div className="absolute inset-0 w-full h-full">
-        <img
-          src={portraitAsset.url}
-          alt="Harshawardhan Kapadnis — AI Engineer"
-          width={1920}
-          height={1080}
-          className="w-full h-full object-cover object-[center_22%] sm:object-[center_28%] opacity-90"
-        />
-        {/* Darken right side on desktop so text stays readable; bottom fade on mobile */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/55 to-transparent hidden sm:block" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20 sm:hidden" />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 min-h-screen flex flex-col justify-end section-gutter pb-[var(--space-xl)] pt-32">
-        <div className="w-full max-w-3xl">
+    <section className="relative min-h-screen w-full overflow-hidden hero-glow grid lg:grid-cols-2">
+      {/* Left: text */}
+      <div className="relative z-10 min-h-screen flex flex-col justify-end section-gutter pb-[var(--space-xl)] pt-32 lg:bg-background">
+        <div className="w-full max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             {/* Availability badge */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 mb-6 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 mb-6">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
@@ -44,17 +30,17 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="font-display leading-none tracking-tighter text-[13vw] sm:text-[11vw] md:text-hero">
-              <span className="block text-foreground drop-shadow-lg">HARSHAWARDHAN</span>
-              <span className="block text-foreground drop-shadow-lg">KAPADNIS</span>
-              <span className="block text-gradient drop-shadow-lg">AI ENGINEER</span>
+            <h1 className="font-display leading-[0.85] tracking-tighter text-[15vw] sm:text-[12vw] lg:text-[6vw] xl:text-[5.4vw]">
+              <span className="block text-foreground">HARSHAWARDHAN</span>
+              <span className="block text-foreground">KAPADNIS</span>
+              <span className="block text-gradient">AI ENGINEER</span>
             </h1>
 
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed drop-shadow"
+              className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed"
             >
               I turn models into products — computer vision, generative AI and
               blockchain systems that leave the notebook and run in production.
@@ -75,7 +61,7 @@ export function Hero() {
               </a>
               <a
                 href="mailto:harshawardhankapadnis@gmail.com"
-                className="rounded-full border border-border bg-background/40 backdrop-blur-sm px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
+                className="rounded-full border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
               >
                 Hire me
               </a>
@@ -87,11 +73,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.7 }}
-            className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-border/60 pt-8 max-w-4xl"
+            className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-border pt-8 max-w-xl"
           >
             {stats.map((stat) => (
               <div key={stat.label}>
-                <dt className="font-display text-4xl md:text-5xl text-primary leading-none drop-shadow-lg">
+                <dt className="font-display text-4xl md:text-5xl text-primary leading-none">
                   {stat.value}
                 </dt>
                 <dd className="mt-2 text-xs uppercase tracking-widest text-muted-foreground">
@@ -101,6 +87,29 @@ export function Hero() {
             ))}
           </motion.dl>
         </div>
+      </div>
+
+      {/* Right: portrait, edge-to-edge, full height */}
+      <div className="relative hidden lg:block min-h-screen overflow-hidden">
+        <img
+          src={portraitAsset.url}
+          alt="Portrait of Harshawardhan Kapadnis, AI Engineer"
+          width={960}
+          height={1280}
+          className="absolute inset-0 h-full w-full object-cover object-[center_20%]"
+        />
+        {/* subtle left fade into the text column */}
+        <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent" />
+      </div>
+
+      {/* Mobile: portrait as background behind text */}
+      <div className="absolute inset-0 -z-0 lg:hidden">
+        <img
+          src={portraitAsset.url}
+          alt="Harshawardhan Kapadnis — AI Engineer"
+          className="h-full w-full object-cover object-[center_25%] opacity-35"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/50" />
       </div>
     </section>
   )
