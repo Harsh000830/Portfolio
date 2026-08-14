@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import heroImage from '@/assets/hero.jpg'
+import portraitAsset from '@/assets/harsh-portrait.png.asset.json'
 
 const stats = [
   { value: '2+', label: 'Years building AI' },
@@ -25,7 +26,8 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col justify-end pb-12 md:pb-16 px-4 sm:px-6 md:px-12 lg:px-16 pt-32">
-        <div className="w-full max-w-6xl">
+        <div className="w-full max-w-7xl">
+          <div className="grid items-end gap-8 lg:grid-cols-[minmax(0,1fr)_320px] xl:grid-cols-[minmax(0,1fr)_380px]">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -79,6 +81,28 @@ export function Hero() {
               </a>
             </motion.div>
           </motion.div>
+
+          {/* Portrait */}
+          <motion.div
+            initial={{ opacity: 0, y: 30, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 0.3, duration: 0.8, ease: 'easeOut' }}
+            className="relative mx-auto w-full max-w-[280px] lg:max-w-none order-first lg:order-none"
+          >
+            <div className="absolute inset-x-4 bottom-0 top-8 rounded-t-[999px] bg-primary opacity-20 blur-2xl" />
+            <div className="relative overflow-hidden rounded-t-[999px] rounded-b-3xl border border-border bg-secondary/60 backdrop-blur-sm">
+              <img
+                src={portraitAsset.url}
+                alt="Portrait of Harshawardhan Kapadnis, AI Engineer"
+                width={760}
+                height={760}
+                loading="eager"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </motion.div>
+          </div>
+
 
           {/* Stats */}
           <motion.dl
