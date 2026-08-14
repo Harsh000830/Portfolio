@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import heroImage from '@/assets/hero.jpg'
 import portraitAsset from '@/assets/harsh-portrait.png.asset.json'
 
 const stats = [
@@ -12,29 +11,30 @@ const stats = [
 export function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden hero-glow">
-      {/* Background */}
+      {/* Portrait as full-bleed background */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src={heroImage}
-          alt="Harshawardhan Kapadnis — AI Engineer at work"
+          src={portraitAsset.url}
+          alt="Harshawardhan Kapadnis — AI Engineer"
           width={1920}
           height={1080}
-          className="w-full h-full object-cover object-[70%_center] sm:object-center opacity-80"
+          className="w-full h-full object-cover object-[center_22%] sm:object-[center_28%] opacity-90"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/30" />
+        {/* Darken right side on desktop so text stays readable; bottom fade on mobile */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/55 to-transparent hidden sm:block" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20 sm:hidden" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col justify-end section-gutter pb-[var(--space-xl)] pt-32">
-        <div className="w-full max-w-7xl">
-          <div className="grid items-end gap-8 lg:grid-cols-[minmax(0,1fr)_320px] xl:grid-cols-[minmax(0,1fr)_380px]">
+        <div className="w-full max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             {/* Availability badge */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 mb-6">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 mb-6 backdrop-blur-sm">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
@@ -45,16 +45,16 @@ export function Hero() {
             </div>
 
             <h1 className="font-display leading-none tracking-tighter text-[13vw] sm:text-[11vw] md:text-hero">
-              <span className="block text-foreground">HARSHAWARDHAN</span>
-              <span className="block text-foreground">KAPADNIS</span>
-              <span className="block text-gradient">AI ENGINEER</span>
+              <span className="block text-foreground drop-shadow-lg">HARSHAWARDHAN</span>
+              <span className="block text-foreground drop-shadow-lg">KAPADNIS</span>
+              <span className="block text-gradient drop-shadow-lg">AI ENGINEER</span>
             </h1>
 
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed"
+              className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed drop-shadow"
             >
               I turn models into products — computer vision, generative AI and
               blockchain systems that leave the notebook and run in production.
@@ -75,47 +75,23 @@ export function Hero() {
               </a>
               <a
                 href="mailto:harshawardhankapadnis@gmail.com"
-                className="rounded-full border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
+                className="rounded-full border border-border bg-background/40 backdrop-blur-sm px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
               >
                 Hire me
               </a>
             </motion.div>
           </motion.div>
 
-          {/* Portrait */}
-          <motion.div
-            initial={{ opacity: 0, y: 30, scale: 0.96 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ delay: 0.3, duration: 0.8, ease: 'easeOut' }}
-            className="relative mx-auto w-full max-w-[190px] sm:max-w-[230px] lg:max-w-none order-first lg:order-none"
-          >
-            <div className="absolute inset-x-4 bottom-0 top-8 rounded-t-full bg-primary opacity-20 blur-2xl" />
-            <div className="relative aspect-[4/5] overflow-hidden rounded-t-full rounded-b-2xl border border-border bg-secondary/60 backdrop-blur-sm">
-              <img
-                src={portraitAsset.url}
-                alt="Portrait of Harshawardhan Kapadnis, AI Engineer"
-                width={760}
-                height={950}
-                loading="eager"
-                className="absolute inset-0 h-full w-full object-cover object-[center_18%] scale-105"
-              />
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background/80 to-transparent" />
-            </div>
-          </motion.div>
-
-          </div>
-
-
           {/* Stats */}
           <motion.dl
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.7 }}
-            className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-border pt-8 max-w-4xl"
+            className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-border/60 pt-8 max-w-4xl"
           >
             {stats.map((stat) => (
               <div key={stat.label}>
-                <dt className="font-display text-4xl md:text-5xl text-primary leading-none">
+                <dt className="font-display text-4xl md:text-5xl text-primary leading-none drop-shadow-lg">
                   {stat.value}
                 </dt>
                 <dd className="mt-2 text-xs uppercase tracking-widest text-muted-foreground">
