@@ -19,7 +19,7 @@ export function Hero() {
           alt="Harshawardhan Kapadnis — AI Engineer at work"
           width={1920}
           height={1080}
-          className="w-full h-full object-cover object-center opacity-80"
+          className="w-full h-full object-cover object-[70%_center] sm:object-center opacity-80"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/30" />
       </div>
@@ -87,20 +87,22 @@ export function Hero() {
             initial={{ opacity: 0, y: 30, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.8, ease: 'easeOut' }}
-            className="relative mx-auto w-full max-w-[280px] lg:max-w-none order-first lg:order-none"
+            className="relative mx-auto w-full max-w-[190px] sm:max-w-[230px] lg:max-w-none order-first lg:order-none"
           >
-            <div className="absolute inset-x-4 bottom-0 top-8 rounded-t-[999px] bg-primary opacity-20 blur-2xl" />
-            <div className="relative overflow-hidden rounded-t-[999px] rounded-b-3xl border border-border bg-secondary/60 backdrop-blur-sm">
+            <div className="absolute inset-x-4 bottom-0 top-8 rounded-t-full bg-primary opacity-20 blur-2xl" />
+            <div className="relative aspect-[4/5] overflow-hidden rounded-t-full rounded-b-2xl border border-border bg-secondary/60 backdrop-blur-sm">
               <img
                 src={portraitAsset.url}
                 alt="Portrait of Harshawardhan Kapadnis, AI Engineer"
                 width={760}
-                height={760}
+                height={950}
                 loading="eager"
-                className="w-full h-auto object-cover"
+                className="absolute inset-0 h-full w-full object-cover object-[center_18%] scale-105"
               />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background/80 to-transparent" />
             </div>
           </motion.div>
+
           </div>
 
 
