@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import campusImg from '@/assets/edu-campus.jpg'
 import labImg from '@/assets/edu-lab.jpg'
+import hackathonImg from '@/assets/edu-hackathon.jpg'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -9,14 +10,24 @@ const fadeInUp = {
   transition: { duration: 0.8, ease: 'easeOut' }
 }
 
+const coursework = [
+  'Machine Learning',
+  'Deep Learning',
+  'Computer Vision',
+  'Natural Language Processing',
+  'Data Structures & Algorithms',
+  'DBMS',
+  'Statistics',
+  'Cloud & Deployment',
+]
+
 export function Education() {
   return (
-    <section id="education" className="section-padding bg-[#0d0d0d]">
+    <section id="education" className="section-padding bg-secondary/30">
       <div className="max-w-7xl mx-auto">
-        {/* Section Title */}
-        <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Background</span>
-          <div className="w-6 h-px bg-gray-600 mt-2" />
+        <motion.div {...fadeInUp} className="mb-8">
+          <span className="text-sm text-primary tracking-widest uppercase">Background</span>
+          <div className="w-6 h-px bg-primary mt-2" />
         </motion.div>
 
         <motion.h2
@@ -28,78 +39,115 @@ export function Education() {
 
         <div className="space-y-16 lg:space-y-24">
           {/* B.Tech */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
             <motion.div {...fadeInUp}>
-              <img
-                src={campusImg}
-                alt="K.K. Wagh Institute of Education and Research campus"
-                loading="lazy"
-                width={1200}
-                height={900}
-                className="w-full h-auto grayscale"
-              />
-              <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
+              <div className="overflow-hidden rounded-2xl border border-border">
+                <img
+                  src={campusImg}
+                  alt="Engineering college campus at golden hour"
+                  loading="lazy"
+                  width={1408}
+                  height={1056}
+                  className="w-full h-auto transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+              <p className="mt-4 text-xs text-muted-foreground tracking-widest uppercase">
                 NASHIK, MAHARASHTRA — INDIA
               </p>
             </motion.div>
 
-            <motion.div
-              {...fadeInUp}
-              transition={{ ...fadeInUp.transition, delay: 0.2 }}
-              className="flex items-center"
-            >
-              <div>
-                <h3 className="text-xl lg:text-2xl font-light text-white mb-2">
-                  B.Tech, Artificial Intelligence & Data Science
-                </h3>
-                <p className="text-base text-gray-400 mb-4">
-                  K.K. Wagh Institute of Education and Research, Nashik
-                </p>
-                <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
-                  Four years spent moving between the theory and the build — statistics,
-                  deep learning, and data engineering on one side, and hackathons,
-                  competitions, and shipped side projects on the other.
-                </p>
-                <p className="text-sm text-gray-500">Nov 2022 — Jun 2026 · CGPA 7.80</p>
+            <motion.div {...fadeInUp} transition={{ ...fadeInUp.transition, delay: 0.2 }}>
+              <h3 className="text-2xl lg:text-3xl font-light text-foreground mb-2">
+                B.Tech, Artificial Intelligence & Data Science
+              </h3>
+              <p className="text-base text-primary mb-4">
+                K.K. Wagh Institute of Education and Research, Nashik
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Four years moving between theory and the build — statistics, deep
+                learning and data engineering on one side; hackathons, competitions
+                and shipped side projects on the other.
+              </p>
+              <div className="flex gap-8">
+                <div>
+                  <p className="font-display text-4xl text-primary leading-none">7.80</p>
+                  <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">CGPA</p>
+                </div>
+                <div>
+                  <p className="font-display text-4xl text-foreground leading-none">2022—26</p>
+                  <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">Nov — Jun</p>
+                </div>
               </div>
             </motion.div>
           </div>
 
           {/* Focus areas */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
-            <motion.div
-              {...fadeInUp}
-              className="flex items-center lg:order-2"
-            >
-              <div>
-                <h3 className="text-xl lg:text-2xl font-light text-white mb-4">
-                  Focus Areas
-                </h3>
-                <p className="text-gray-400 leading-relaxed mb-4 text-sm lg:text-base">
-                  Computer vision and deep learning coursework grounded the work at
-                  Combat Solutions — segmentation, OCR pipelines, and real-time
-                  inference. Alongside it, full-stack and database work made the models
-                  usable: APIs, dashboards, and deployable products rather than notebooks.
-                </p>
-                <p className="text-sm text-gray-500">Computer Vision · NLP · Generative AI · Full Stack</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
+            <motion.div {...fadeInUp} className="lg:order-2">
+              <h3 className="text-2xl lg:text-3xl font-light text-foreground mb-4">
+                Core Coursework
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Computer vision and deep learning coursework grounded the work at
+                Combat Solutions — segmentation, OCR pipelines and real-time inference.
+                Full-stack and database subjects made the models usable: APIs,
+                dashboards and deployable products rather than notebooks.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {coursework.map((item) => (
+                  <span
+                    key={item}
+                    className="px-3 py-1.5 text-xs text-muted-foreground border border-border rounded-full hover:border-primary/50 hover:text-primary transition-colors"
+                  >
+                    {item}
+                  </span>
+                ))}
               </div>
             </motion.div>
 
-            <motion.div
-              {...fadeInUp}
-              transition={{ ...fadeInUp.transition, delay: 0.2 }}
-              className="lg:order-1"
-            >
-              <img
-                src={labImg}
-                alt="Machine learning lab work"
-                loading="lazy"
-                width={1200}
-                height={900}
-                className="w-full h-auto grayscale"
-              />
-              <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
+            <motion.div {...fadeInUp} transition={{ ...fadeInUp.transition, delay: 0.2 }} className="lg:order-1">
+              <div className="overflow-hidden rounded-2xl border border-border">
+                <img
+                  src={labImg}
+                  alt="Machine learning lab with students training models"
+                  loading="lazy"
+                  width={1408}
+                  height={1056}
+                  className="w-full h-auto transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+              <p className="mt-4 text-xs text-muted-foreground tracking-widest uppercase">
                 VISION · NLP · GENERATIVE AI
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Beyond the classroom */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
+            <motion.div {...fadeInUp}>
+              <div className="overflow-hidden rounded-2xl border border-border">
+                <img
+                  src={hackathonImg}
+                  alt="Hackathon night with teams building prototypes"
+                  loading="lazy"
+                  width={1408}
+                  height={1056}
+                  className="w-full h-auto transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+              <p className="mt-4 text-xs text-muted-foreground tracking-widest uppercase">
+                HACKATHONS · COMPETITIONS · PROTOTYPES
+              </p>
+            </motion.div>
+
+            <motion.div {...fadeInUp} transition={{ ...fadeInUp.transition, delay: 0.2 }}>
+              <h3 className="text-2xl lg:text-3xl font-light text-foreground mb-4">
+                Beyond the Classroom
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Most of what I know came from 36-hour build sprints: a national finalist
+                run at Smart India Hackathon 2024, a third-place IoT solar tracker, and a
+                steady stream of side projects that had to actually work by demo time.
               </p>
             </motion.div>
           </div>
