@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import portraitAsset from '@/assets/harsh-portrait.png.asset.json'
+import heroImage from '@/assets/hero.png'
 
 const stats = [
   { value: '2+', label: 'Years building AI' },
@@ -14,7 +14,7 @@ export function Hero() {
       {/* Mobile: portrait on top, visible (not behind text) */}
       <div className="relative w-full h-[42vh] min-h-[300px] overflow-hidden lg:hidden">
         <img
-          src={portraitAsset.url}
+          src={heroImage}
           alt="Portrait of Harshawardhan Kapadnis, AI Engineer"
           className="h-full w-full object-cover object-[center_18%]"
         />
@@ -104,7 +104,7 @@ export function Hero() {
       {/* Right: portrait, edge-to-edge, full height */}
       <div className="relative hidden lg:block min-h-screen overflow-hidden">
         <img
-          src={portraitAsset.url}
+          src={heroImage}
           alt="Portrait of Harshawardhan Kapadnis, AI Engineer"
           width={960}
           height={1280}

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import workspaceImg from '@/assets/workspace.jpg'
-import abstractImg from '@/assets/abstract.jpg'
+import abstractImg from '@/assets/abstract.png'
 import researchImg from '@/assets/research.jpg'
 
 const fadeInUp = {

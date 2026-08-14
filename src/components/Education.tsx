@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import campusAsset from '@/assets/kkwagh-campus.jpg.asset.json'
+import campusImage from '@/assets/edu-campus.jpg'
 import labImg from '@/assets/edu-lab.jpg'
 import hackathonImg from '@/assets/edu-hackathon.jpg'
 
@@ -43,7 +43,7 @@ export function Education() {
             <motion.div {...fadeInUp}>
               <div className="overflow-hidden rounded-2xl border border-border aspect-[16/10]">
                 <img
-                  src={campusAsset.url}
+                  src={campusImage}
                   alt="K.K. Wagh Institute of Education and Research campus, Nashik"
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
