@@ -51,6 +51,22 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
   }
 
   body {
@@ -58,6 +74,33 @@
     @apply bg-background text-foreground;
     line-height: 1.6;
     overflow-x: hidden;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  a,
+  button {
+    transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease,
+      opacity 0.25s ease, transform 0.25s ease, box-shadow 0.3s ease;
+  }
+
+  img {
+    transition: opacity 0.5s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
   }
 
   ::selection {
