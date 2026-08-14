@@ -13,6 +13,19 @@ export default {
       },
     },
     extend: {
+      spacing: {
+        "3xs": "var(--space-3xs)",
+        "2xs": "var(--space-2xs)",
+        xs: "var(--space-xs)",
+        sm: "var(--space-sm)",
+        md: "var(--space-md)",
+        lg: "var(--space-lg)",
+        xl: "var(--space-xl)",
+        "2xl": "var(--space-2xl)",
+        section: "var(--section-y)",
+        gutter: "var(--section-x)",
+        block: "var(--block-y)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
