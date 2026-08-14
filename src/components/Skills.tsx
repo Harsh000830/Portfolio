@@ -1,16 +1,18 @@
 import { motion } from 'framer-motion'
 
-const skills = [
-  'Machine Learning',
-  'Deep Learning',
-  'Natural Language Processing',
-  'Large Language Models (LLMs)',
-  'Retrieval-Augmented Generation (RAG)',
-  'Model Fine-tuning & Evaluation',
-  'AI Agents & Tool Use',
-  'Computer Vision',
-  'MLOps & Model Deployment',
-  'Python · PyTorch · TensorFlow',
+const skillGroups = [
+  {
+    label: 'Programming & Web',
+    items: ['Python', 'JavaScript', 'React.js', 'Node.js', 'REST APIs', 'Backend Engineering'],
+  },
+  {
+    label: 'AI / ML & Generative AI',
+    items: ['TensorFlow', 'OpenCV', 'Computer Vision', 'CNNs', 'NLP', 'RAG', 'Generative AI', 'n8n Automation'],
+  },
+  {
+    label: 'Databases & Tools',
+    items: ['SQL', 'PostgreSQL', 'MongoDB', 'Neo4j', 'Git & GitHub', 'Postman', 'VS Code'],
+  },
 ]
 
 const fadeInUp = {
@@ -37,20 +39,27 @@ export function Skills() {
           SKILLS
         </motion.h2>
 
-        {/* Skills List */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-4 lg:gap-y-6">
-          {skills.map((skill, index) => (
+        {/* Skill Groups */}
+        <div className="space-y-12 lg:space-y-16">
+          {skillGroups.map((group, index) => (
             <motion.div
-              key={skill}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              key={group.label}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="border-b border-gray-800 pb-4"
+              className="grid grid-cols-1 lg:grid-cols-12 gap-6 border-t border-gray-800 pt-8"
             >
-              <span className="text-lg md:text-xl lg:text-2xl text-gray-300 font-light">
-                {skill}
-              </span>
+              <p className="lg:col-span-4 text-sm text-gray-500 tracking-widest uppercase">
+                {group.label}
+              </p>
+              <div className="lg:col-span-8 flex flex-wrap gap-x-8 gap-y-3">
+                {group.items.map((item) => (
+                  <span key={item} className="text-lg md:text-xl lg:text-2xl text-gray-300 font-light">
+                    {item}
+                  </span>
+                ))}
+              </div>
             </motion.div>
           ))}
         </div>
