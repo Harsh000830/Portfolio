@@ -10,8 +10,11 @@ import { Achievements } from '@/components/Achievements'
 import { Education } from '@/components/Education'
 import { CTABand } from '@/components/CTABand'
 import { Contact } from '@/components/Contact'
+import { useSmoothScroll } from '@/hooks/useSmoothScroll'
 
 export default function Index() {
+  useSmoothScroll()
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <GrainOverlay />
