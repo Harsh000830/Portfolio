@@ -25,7 +25,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 min-h-screen flex flex-col justify-end pb-12 md:pb-16 px-4 sm:px-6 md:px-12 lg:px-16 pt-32">
+      <div className="relative z-10 min-h-screen flex flex-col justify-end section-gutter pb-[var(--space-xl)] pt-32">
         <div className="w-full max-w-7xl">
           <div className="grid items-end gap-8 lg:grid-cols-[minmax(0,1fr)_320px] xl:grid-cols-[minmax(0,1fr)_380px]">
           <motion.div

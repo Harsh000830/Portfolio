@@ -44,7 +44,7 @@ export function Achievements() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="border-t border-gray-800 py-8 md:py-10"
+              className="border-t border-border block-y"
             >
               <div className="flex flex-col md:flex-row md:justify-between gap-3 md:gap-12">
                 <div className="md:max-w-3xl">
