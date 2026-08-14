@@ -34,6 +34,15 @@ const projects = [
     stack: ['PaddleOCR', 'OpenCV', 'Python', 'FastAPI', 'React'],
   },
   {
+    title: 'SoulSociety — Branded Footwear Shopping App',
+    period: '2025',
+    tag: 'Mobile App',
+    description:
+      'A modern mobile e-commerce app for branded footwear built with Flutter and native Android integration (Java/Kotlin). Supports seamless catalog browsing, size and colour selection, cart management and a quick checkout flow for a smooth shopping experience.',
+    stack: ['Flutter', 'Dart', 'Kotlin', 'Java', 'Android'],
+    link: 'https://github.com/Harsh000830/SoulSociety',
+  },
+  {
     title: 'Personal Portfolio Platform',
     period: '2026',
     tag: 'Full Stack',
@@ -42,6 +51,7 @@ const projects = [
     stack: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
   },
 ]
+
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
