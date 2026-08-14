@@ -41,14 +41,12 @@ export function Education() {
           {/* B.Tech */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
             <motion.div {...fadeInUp}>
-              <div className="overflow-hidden rounded-2xl border border-border">
+              <div className="overflow-hidden rounded-2xl border border-border aspect-[16/10]">
                 <img
                   src={campusAsset.url}
                   alt="K.K. Wagh Institute of Education and Research campus, Nashik"
                   loading="lazy"
-                  width={723}
-                  height={278}
-                  className="w-full h-auto transition-transform duration-700 hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
               <p className="mt-4 text-xs text-muted-foreground tracking-widest uppercase">
@@ -106,14 +104,12 @@ export function Education() {
             </motion.div>
 
             <motion.div {...fadeInUp} transition={{ ...fadeInUp.transition, delay: 0.2 }} className="lg:order-1">
-              <div className="overflow-hidden rounded-2xl border border-border">
+              <div className="overflow-hidden rounded-2xl border border-border aspect-[16/10]">
                 <img
                   src={labImg}
                   alt="Machine learning lab with students training models"
                   loading="lazy"
-                  width={1408}
-                  height={1056}
-                  className="w-full h-auto transition-transform duration-700 hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
               <p className="mt-4 text-xs text-muted-foreground tracking-widest uppercase">
@@ -125,14 +121,12 @@ export function Education() {
           {/* Beyond the classroom */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
             <motion.div {...fadeInUp}>
-              <div className="overflow-hidden rounded-2xl border border-border">
+              <div className="overflow-hidden rounded-2xl border border-border aspect-[16/10]">
                 <img
                   src={hackathonImg}
                   alt="Hackathon night with teams building prototypes"
                   loading="lazy"
-                  width={1408}
-                  height={1056}
-                  className="w-full h-auto transition-transform duration-700 hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
               <p className="mt-4 text-xs text-muted-foreground tracking-widest uppercase">
