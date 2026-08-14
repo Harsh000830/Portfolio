@@ -19,7 +19,7 @@ export function Hero() {
           alt="Harshawardhan Kapadnis — AI Engineer at work"
           width={1920}
           height={1080}
-          className="w-full h-full object-cover object-center opacity-80"
+          className="w-full h-full object-cover object-[70%_center] sm:object-center opacity-80"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/30" />
       </div>
