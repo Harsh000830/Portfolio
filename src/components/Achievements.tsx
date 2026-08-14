@@ -55,7 +55,7 @@ export function Achievements() {
                     {item.detail}
                   </p>
                 </div>
-                <span className="text-sm text-gray-600 shrink-0">{item.year}</span>
+                <span className="font-display text-3xl text-primary shrink-0 leading-none">{item.year}</span>
               </div>
             </motion.div>
           ))}

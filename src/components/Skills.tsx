@@ -55,7 +55,7 @@ export function Skills() {
               </p>
               <div className="lg:col-span-8 flex flex-wrap gap-x-8 gap-y-3">
                 {group.items.map((item) => (
-                  <span key={item} className="text-lg md:text-xl lg:text-2xl text-gray-300 font-light">
+                  <span key={item} className="text-lg md:text-xl lg:text-2xl text-gray-300 font-light transition-colors hover:text-primary cursor-default">
                     {item}
                   </span>
                 ))}
