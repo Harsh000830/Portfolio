@@ -31,7 +31,7 @@ export function CTABand() {
               Start a conversation
             </a>
             <a
-              href="https://www.linkedin.com/in/harshawardhan-kapadnis"
+              href="https://www.linkedin.com/in/harshawardhan-kapadnis-1baaa3256/"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full border border-border px-6 py-3 text-sm font-medium transition-colors hover:border-primary hover:text-primary"
